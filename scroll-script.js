@@ -1,4 +1,3 @@
-const scrollContainer = document.getElementById('scrollContainer');
 const scrollText = document.getElementById('scrollText');
 
 document.addEventListener('keydown', (event) => {
@@ -10,9 +9,9 @@ document.addEventListener('keydown', (event) => {
 });
 
 function scrollTextLeft() {
-  scrollContainer.scrollLeft -= 10;
+  scrollText.style.left = parseInt(scrollText.style.left || 0) - 10 + 'px';
 }
 
 function scrollTextRight() {
-  scrollContainer.scrollLeft += 10;
+  scrollText.style.left = parseInt(scrollText.style.left || 0) + 10 + 'px';
 }
