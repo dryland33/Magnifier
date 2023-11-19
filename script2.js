@@ -27,7 +27,19 @@ function displayText(text) {
 }
 
 magnifierContent.addEventListener('mousemove', (e) => {
-    // Magnification logic (same as before)
+    const mouseX = e.pageX - magnifierContainer.offsetLeft;
+    const mouseY = e.pageY - magnifierContainer.offsetTop;
+
+    const glassSize = magnifierGlass.offsetWidth / 2;
+    const offsetX = mouseX - glassSize;
+    const offsetY = mouseY - glassSize;
+
+    magnifierGlass.style.left = `${offsetX}px`;
+    magnifierGlass.style.top = `${offsetY}px`;
+
+    magnifierGlass.style.visibility = 'visible';
+
+    magnifierGlass.style.backgroundPosition = `-${offsetX * 2}px -${offsetY * 2}px`;
 });
 
 magnifierContent.addEventListener('mouseleave', () => {
