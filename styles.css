@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.magnifier-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.magnifier-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.magnifier-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+.magnifier-glass {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    visibility: hidden;
+}
