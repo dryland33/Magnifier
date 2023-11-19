@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adjust Text Size with Arrow Keys</title>
+  <style>
+    #textContainer {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="textContainer">
+  This is some text.
+</div>
+
+<script>
+  // Get the text container
+  var textContainer = document.getElementById('textContainer');
+
+  // Set the initial font size
+  var currentFontSize = 16;
+
+  // Function to adjust font size based on arrow keys
+  function adjustFontSize(event) {
+    switch (event.key) {
+      case 'ArrowUp':
+        // Increase font size
+        currentFontSize += 2;
+        break;
+      case 'ArrowDown':
+        // Decrease font size, but make sure it doesn't go below a minimum value
+        currentFontSize = Math.max(10, currentFontSize - 2);
+        break;
+    }
+
+    // Apply the new font size to the text container
+    textContainer.style.fontSize = currentFontSize + 'px';
+  }
+
+  // Listen for the "keydown" event on the document
+  document.addEventListener('keydown', adjustFontSize);
+</script>
+
+</body>
+</html>
