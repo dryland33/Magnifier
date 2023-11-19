@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.file-input-container {
+    margin: 10px;
+}
+
+.marquee-container {
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px;
+}
